@@ -11,9 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'https://congnocore.vercel.app/',
-}));
+app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
