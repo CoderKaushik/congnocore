@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import Task from './models/task.js';
 
 dotenv.config();
@@ -10,6 +11,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
+app.use(cors({
+  origin: 'https://congnocore.vercel.app/',
+}));
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,

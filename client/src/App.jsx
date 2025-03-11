@@ -16,7 +16,7 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('/tasks');
+      const response = await fetch('https://congnocore.onrender.com/tasks');
       const data = await response.json();
       setTasks(data);
       setTaskId(data.length ? data[data.length - 1]._id + 1 : 1);
@@ -27,7 +27,7 @@ function App() {
 
   const addTask = async (task) => {
     try {
-      const response = await fetch('/tasks', {
+      const response = await fetch('https://congnocore.onrender.com/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function App() {
 
   const deleteTask = async (taskToDelete) => {
     try {
-      await fetch(`/tasks/${taskToDelete._id}`, {
+      await fetch(`https://congnocore.onrender.com/tasks/${taskToDelete._id}`, {
         method: 'DELETE',
       });
       const updatedTasks = tasks.filter(task => task._id !== taskToDelete._id);
@@ -61,7 +61,7 @@ function App() {
 
   const deleteAllTasks = async () => {
     try {
-      const response = await fetch('/tasks', {
+      const response = await fetch('https://congnocore.onrender.com/tasks', {
         method: 'DELETE',
       });
       if (response.ok) {
