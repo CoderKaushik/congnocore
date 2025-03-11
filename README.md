@@ -1,7 +1,6 @@
 # Task Manager - MERN Stack Application
 
-!![alt text](image.png)
-*(Replace with an actual screenshot of your application)*
+![alt text](image.png)
 
 Task Manager is a simple and intuitive task management application built using the MERN stack (MongoDB, Express.js, React, and Node.js). It allows users to add, view, and delete tasks with a clean and modern user interface. The frontend is built with **Vite** for fast development, styled using **Tailwind CSS**, and enhanced with **React Hot Toast** for notifications.
 
