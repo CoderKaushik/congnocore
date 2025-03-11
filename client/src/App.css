@@ -1,0 +1,9 @@
+/* Add any custom styles here if needed */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Ensure the Toaster notifications are properly styled */
+.Toastify__toast-container {
+  margin-top: 1rem;
+}
